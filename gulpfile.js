@@ -10,7 +10,7 @@ gulp.task('processHTML', () => {
       .pipe(gulp.dest('dist'));
   });
 
-gulp.task('processJS', async() => {
+gulp.task('processJS', () => {
     gulp.src('scripts.js')
       .pipe(jshint({
         esversion: 8
@@ -23,7 +23,7 @@ gulp.task('processJS', async() => {
       .pipe(gulp.dest('dist'));
   });
 
-  gulp.task('babelPolyfill', async() => {
+  gulp.task('babelPolyfill', () => {
     gulp.src('node_modules/babel-polyfill/browser.js')
       .pipe(gulp.dest('dist/node_modules/babel-polyfill'));
   });
